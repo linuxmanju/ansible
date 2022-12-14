@@ -1,0 +1,9 @@
+- name: PV Ansibile prod tasks
+  hosts: all
+  gather_facts: yes
+  become: no
+
+  tasks:
+    - name: Set password Policy
+      import_role:
+        name: password_policy
